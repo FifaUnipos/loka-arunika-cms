@@ -78,7 +78,7 @@ function CollapsibleMenuItem({
       <SidebarMenuItem className="group/item">
         <SidebarMenuButton
           onClick={() => setOpen((v) => !v)}
-          className="group-hover/item:text-primary group-hover/item:bg-accent"
+          className="group-hover/item:text-primary group-hover/item:bg-accent hover:bg-accent hover:text-primary"
         >
           {item.icon && <item.icon />}
           <span>{item.title}</span>

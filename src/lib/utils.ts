@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import axios, { AxiosError } from 'axios';
+import { parseISO, format } from 'date-fns';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -121,4 +122,17 @@ export function formatRupiah(amount: number | string): string {
 
 export function uid() {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+export function formatTimestamp(
+  isoTimestamp: string,
+  dateFormat: string = 'HH:mm:ss dd-MM-yyyy',
+): string {
+  const date = parseISO(isoTimestamp);
+
+  if (Number.isNaN(date.getTime())) {
+    throw new Error('Invalid timestamp');
+  }
+
+  return format(date, dateFormat);
 }

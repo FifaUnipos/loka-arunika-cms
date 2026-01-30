@@ -23,7 +23,7 @@ export function LogoutConfirmDialog({
 }: LogoutConfirmDialogProps) {
   return (
     <AlertDialog>
-      <AlertDialogTrigger>{trigger}</AlertDialogTrigger>
+      <AlertDialogTrigger className="w-full">{trigger}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Yakin ingin logout?</AlertDialogTitle>

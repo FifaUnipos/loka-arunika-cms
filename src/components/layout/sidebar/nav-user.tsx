@@ -47,7 +47,7 @@ export function NavUser() {
               role="button"
               tabIndex={0}
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground w-full border-2 border-primary"
+              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground w-full group/sidebarMenuButton hover:bg-primary"
             >
               <Avatar className="h-8 w-8 rounded-full">
                 <AvatarImage
@@ -61,13 +61,13 @@ export function NavUser() {
                 </AvatarFallback>
               </Avatar>
 
-              <div className="grid flex-1 text-left text-sm leading-tight">
+              <div className="grid flex-1 text-left text-sm leading-tight group-hover/sidebarMenuButton:text-white">
                 <span className="truncate font-semibold">
                   {'Bayu Setiawan'}
                 </span>
               </div>
 
-              <CaretDownIcon className="ml-auto size-4" />
+              <CaretDownIcon className="ml-auto size-4 group-hover/sidebarMenuButton:text-white" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
 
@@ -108,7 +108,7 @@ export function NavUser() {
             <LogoutConfirmDialog
               onConfirm={handleLogout}
               trigger={
-                <div className="group text-destructive cursor-pointer hover:bg-destructive px-2 py-1.5 text-sm flex items-center gap-2 rounded-lg">
+                <div className="group text-destructive cursor-pointer hover:bg-destructive px-2 py-1.5 text-sm flex items-center gap-2 rounded-lg w-full">
                   <SignOutIcon className="group-hover:text-white" width={14} />
                   <span className="group-hover:text-white">Log out</span>
                 </div>

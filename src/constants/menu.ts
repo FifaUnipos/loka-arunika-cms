@@ -33,6 +33,10 @@ const menus: MenuData[] = [
         title: 'Create',
         url: '/product/create',
       },
+      {
+        title: 'List',
+        url: '/product',
+      },
     ],
   },
   {
