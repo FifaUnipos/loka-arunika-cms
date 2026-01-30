@@ -87,7 +87,7 @@ function Index() {
                           value={field.state.value}
                           onBlur={field.handleBlur}
                           onChange={(e) => field.handleChange(e.target.value)}
-                          placeholder="******"
+                          placeholder={isVisible ? 'Hidden123' : '********'}
                           autoComplete="off"
                         />
 
@@ -100,9 +100,9 @@ function Index() {
                           }
                         >
                           {isVisible ? (
-                            <EyeSlashIcon size={20} />
-                          ) : (
                             <EyeIcon size={20} />
+                          ) : (
+                            <EyeSlashIcon size={20} />
                           )}
                         </Button>
                       </div>
